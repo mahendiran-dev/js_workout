@@ -1,0 +1,15 @@
+let findSecMin = (arr) => {
+    let Min = Infinity, SecMin = Infinity
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i] < Min) {
+            SecMin = Min
+            Min = arr[i]
+        }
+        else if (arr[i] < SecMin && arr[i] !== Min) {
+            SecMin = arr[i]
+        }
+
+    }
+    return SecMin
+}
+console.log(findSecMin([2, 3, 4, 5, 6, 7]))
